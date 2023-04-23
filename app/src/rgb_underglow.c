@@ -468,9 +468,9 @@ static void zmk_rgb_underglow_effect_test() {
     state.animation_step += 20;
     if (state.animation_step > (HUE_MAX * 3)) {
 
-        rgb.r = 2;
-        rgb.g = 2;
-        rgb.b = 2;
+        rgb.r = 1;
+        rgb.g = 1;
+        rgb.b = 1;
         for (int i = 0; i < STRIP_NUM_PIXELS; i++)
             pixels[i] = rgb;
     }
@@ -481,23 +481,23 @@ static void zmk_rgb_underglow_effect_battery() {
     struct led_rgb rgb;
     if (soc > 80) {
         rgb.r = 0;
-        rgb.g = 2;
+        rgb.g = 1;
 //        rgb.g = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
         rgb.b = 0;
     } else if (soc > 50 && soc < 80) {
-        rgb.r = 2;
+        rgb.r = 1;
 //        rgb.r = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
-        rgb.g = 2;
+        rgb.g = 1;
 //        rgb.g = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
         rgb.b = 0;
     } else if (soc > 20 && soc < 51) {
-        rgb.r = 2;
+        rgb.r = 1;
 //        rgb.r = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
         rgb.g = 1;
 //        rgb.g = 140 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
         rgb.b = 0;
     } else {
-        rgb.r = 2;
+        rgb.r = 1;
 //        rgb.r = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
         rgb.g = 0;
         rgb.b = 0;
