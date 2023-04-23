@@ -143,7 +143,8 @@ static struct led_rgb hsb_to_rgb(struct zmk_led_hsb hsb) {
         break;
     }
 
-    struct led_rgb rgb = {r : r * 255, g : g * 255, b : b * 255};
+    struct led_rgb rgb = {r : r * 2, g : g * 2, b : b * 2};
+//    struct led_rgb rgb = {r : r * 255, g : g * 255, b : b * 255};
 
     return rgb;
 }
