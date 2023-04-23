@@ -480,18 +480,24 @@ static void zmk_rgb_underglow_effect_battery() {
     struct led_rgb rgb;
     if (soc > 80) {
         rgb.r = 0;
-        rgb.g = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
+        rgb.g = 64;
+//        rgb.g = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
         rgb.b = 0;
     } else if (soc > 50 && soc < 80) {
-        rgb.r = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
-        rgb.g = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
+        rgb.r = 64;
+//        rgb.r = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
+        rgb.g = 64;
+//        rgb.g = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
         rgb.b = 0;
     } else if (soc > 20 && soc < 51) {
-        rgb.r = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
-        rgb.g = 140 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
+        rgb.r = 64;
+//        rgb.r = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
+        rgb.g = 35;
+//        rgb.g = 140 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
         rgb.b = 0;
     } else {
-        rgb.r = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
+        rgb.r = 64;
+//        rgb.r = 255 * (CONFIG_ZMK_BACKLIGHT_BRT_SCALE / 100);
         rgb.g = 0;
         rgb.b = 0;
     }
